@@ -68,7 +68,7 @@ defmodule ExBinance.User do
     delete("/api/v3/order", params)
   end
 
-  def check_client_order(symbol, id) do
+  def cancel_client_order(symbol, id) do
     params = %{
       symbol: String.upcase(symbol),
       origClientOrderId: id      
